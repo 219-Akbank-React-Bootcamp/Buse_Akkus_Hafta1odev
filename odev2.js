@@ -259,7 +259,7 @@ const people = [
  */
 
     Array.prototype.groupBy = function (callback) {
-        var obj = {},
+        let obj = {},
           firstLetter,
           existsLetter;
       
