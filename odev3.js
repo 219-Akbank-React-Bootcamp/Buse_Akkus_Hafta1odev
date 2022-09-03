@@ -17,7 +17,7 @@
       id: 6,
       name: 'Klasör 2',
       files: [
-        { id: 17, name: 'profil.jpg' },
+        { id: 21, name: 'foto.png' },
         { id: 22, name: 'dosya.xls' },
       ],
     },
