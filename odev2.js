@@ -13,7 +13,7 @@
 
 //örnek array
 
-const array = [
+const people = [
     {
         "name": "Marge Simpson",
         "gender": "f"
@@ -257,3 +257,36 @@ const array = [
         ... devamı
     }
  */
+
+    Array.prototype.groupBy = function (callback) {
+        var obj = {},
+          firstLetter,
+          existsLetter;
+      
+        for (let i = 0; i < this.length; i++) {
+          if (callback(this[i])) {
+            firstLetter = callback(this[i]).toUpperCase();
+            existsLetter = Object.keys(obj).includes(firstLetter);
+            if (existsLetter) obj[firstLetter] = [...obj[firstLetter], this[i]];
+            else obj[firstLetter] = [this[i]];
+          }
+        }
+        return Object.keys(obj)
+          .sort(compare)
+          .reduce(function (sorted, key) {
+            sorted[key] = obj[key];
+            return sorted;
+          }, {});
+      };
+      
+      function compare(a, b) {
+        if (a[0] > b[0]) {
+          return 1;
+        } else if (a[0] < b[0]) {
+          return -1;
+        }
+        return 0;
+      }
+      
+      let result = people.groupBy((item) => item.name[0]);
+      console.log(result);

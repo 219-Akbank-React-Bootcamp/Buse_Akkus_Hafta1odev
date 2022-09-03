@@ -9,8 +9,17 @@
 
 //Test :
 
-const array = ["Patika","219","Akbank","React","Bootcamp"]
+// const array = ["Patika","219","Akbank","React","Bootcamp"]
 
-console.log(array.includesCi("patika")===true ? "Beklendiği gibi" : "Beklendiği gibi değil")
-console.log(array.includesCi("kırmızı")===false ? "Beklendiği gibi" : "Beklendiği gibi değil")
+// console.log(array.includesCi("patika")===true ? "Beklendiği gibi" : "Beklendiği gibi değil")
+// console.log(array.includesCi("kırmızı")===false ? "Beklendiği gibi" : "Beklendiği gibi değil")
 
+const array = ["patika","219","akbank","react","bootcamp"]
+
+Array.prototype.includeCi = function(search) {
+    
+    const result = search.toLocaleLowerCase();
+     console.log(array.includes(result));
+}
+
+array.includeCi("Patika"); // true
