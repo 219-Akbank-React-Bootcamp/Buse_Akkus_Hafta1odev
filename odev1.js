@@ -14,4 +14,3 @@ const array = ["Patika","219","Akbank","React","Bootcamp"]
 console.log(array.includesCi("patika")===true ? "Beklendiği gibi" : "Beklendiği gibi değil")
 console.log(array.includesCi("kırmızı")===false ? "Beklendiği gibi" : "Beklendiği gibi değil")
 
-//buse
