@@ -28,11 +28,7 @@
   ]
 
 
-// move(17,6) // dosyayı klasöre taşıyacak
-// copy(18,7) // kopyasını oluşturacak
-// remove(17) // dosyayı silecek
-// removeFolder(6) //klasörü ve altındaki tüm dosyaları silecek
-// parentFolderOf(17) // ==> 5
+
 
 let destFolderAndFile = [];
 const fs = require("fs");
@@ -118,3 +114,9 @@ function parentFolderOf(fileId) {
 console.log(destFolderAndFile)
 console.log("parentFolderOf Id: " + destFolderAndFile.parentFolderId);
 }
+
+// move(17,6) // dosyayı klasöre taşıyacak
+// copy(18,7) // kopyasını oluşturacak
+// remove(17) // dosyayı silecek
+// removeFolder(6) //klasörü ve altındaki tüm dosyaları silecek
+// parentFolderOf(17) // ==> 5
